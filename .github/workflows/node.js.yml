@@ -25,5 +25,5 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm install
-    - run: sudo pkill screen
-    - run: sudo screen npm start
+    - run: sudo kill -9 `sudo lsof -t -i:9001`
+    - run: sudo npm start &
