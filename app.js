@@ -44,6 +44,10 @@ app.options('*', cors());
 app.use(passport.initialize());
 passport.use('jwt', jwtStrategy);
 
+app.get((req,res)=>{
+  return res.status(200).json({});
+});
+
 // api routes
 app.use('/api', routes);
 
