@@ -45,7 +45,7 @@ app.use(passport.initialize());
 passport.use('jwt', jwtStrategy);
 
 app.get('/status', (req,res)=>{
-  return res.status(200).json({success: true});
+  return res.status(200).json({success: 'true' });
 });
 
 // api routes
