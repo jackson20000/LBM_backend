@@ -25,4 +25,5 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm install
-    - run: sudo pm2 restart backend
+    - run: sudo pkill screen
+    - run: sudo screen npm start
