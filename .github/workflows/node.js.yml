@@ -25,5 +25,5 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm install
-    - run: sudo kill -9 `sudo lsof -t -i:4000`
-    - run: npm run start &
+    - run: pm2 stop backend
+    - run: pm2 start index.js --name=backend -- --port 4000
