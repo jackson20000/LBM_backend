@@ -26,4 +26,4 @@ jobs:
         cache: 'npm'
     - run: npm install
     - run: sudo kill -9 `sudo lsof -t -i:4000`
-    - run: sudo npm start &
+    - run: sudo npm run start &
